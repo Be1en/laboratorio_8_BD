@@ -1,33 +1,33 @@
 <h1>{{title}}</h1>
 
-<h1> Usuarios</h1>
+<h1> Productos</h1>
     <p >
         <div class="container">
-            <h3><a href="/users/create">Crear Usuario</a></h3>
-            <h1>Lista de Usuarios</h1>
-            {{#if usuarios }}
+            <h3><a href="/productos/create">Registrar Producto</a></h3>
+            <h1>Lista de Productos</h1>
+            {{#if productos }}
                 <table class="table table-hover">
                     <thead>
                         <tr>
                             <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>Email</th>
-                            <th>Estado</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                            <th>Descripcion</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {{# each usuarios }}
+                        {{# each productos }}
                         <tr>
-                            <td><a href="/users/show/{{ _id }}">{{ nombre }}</a></td>
-                            <td>{{ apellido }}</td>
-                            <td>{{ email }}</td>
-                            <td>{{ estado }}</td>
+                            <td><a href="/productos/show/{{ _id }}">{{ nombre }}</a></td>
+                            <td>{{ precio }}</td>
+                            <td>{{ stock }}</td>
+                            <td>{{ descripcion }}</td>
                         </tr>
                         {{/each}}
                     </tbody>
                 </table>
             {{~^~}}
-                <div>Usuarios no encontrados.</div>
+                <div>Productos no encontrados.</div>
             {{/if}}
         </div>
     </p>

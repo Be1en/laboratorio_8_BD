@@ -32,7 +32,7 @@ empleadoController.save = function(req, res){
     empleado.save()
     .then(() => {
       console.log("Successfully created a empleado. :)");
-      res.redirect("/empleados/show/" + empleado._id);
+      res.redirect("/employees/show/" + empleado._id);
     })
     .catch(err => {
       console.log('Error: ', err);
@@ -65,7 +65,7 @@ empleadoController.update = function(req, res){
         
         console.log( empleado );
         
-        res.redirect('/empleados/show/' + empleado._id);
+        res.redirect('/employees/show/' + empleado._id);
         
     });
 };
@@ -76,7 +76,7 @@ empleadoController.delete = function(req, res){
         if( err ){ console.log('Error: ', err); return; }
         
         console.log("Empleado deleted!");
-        res.redirect("/empleados");
+        res.redirect("/employees");
     });
     
 };
